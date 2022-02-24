@@ -6,7 +6,7 @@ Attributes:
     Doc_Ingestor: Class to ingest docx file type.
     Csv_Ingestor: Class to ingest csv file type.
     Pdf_Ingestor: Class to ingest PDF file type.
-    Txt_Ingestor: Class to ingest txt file type. 
+    Txt_Ingestor: Class to ingest txt file type.
 
 """
 from .Ingestor import Ingestor

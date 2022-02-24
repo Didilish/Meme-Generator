@@ -3,6 +3,7 @@ from abc import ABC, abstractmethod
 from typing import List
 from .QuoteModel import QuoteModel
 
+
 class IngestorInterface(ABC):
     """Class to implement a can_ingest class method"""
     allowed_extension = []

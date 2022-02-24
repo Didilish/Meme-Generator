@@ -5,17 +5,18 @@ import docx
 from .IngestorInterface import IngestorInterface
 from .QuoteModel import QuoteModel
 
-class Doc_Ingestor(IngestorInterface):      
-    """Class to parse DOCX file and 
+
+class Doc_Ingestor(IngestorInterface):
+    """Class to parse DOCX file and
     create a list of QuoteModel class.
     """
     allowed_extension = ['docx']
-    
+
     @classmethod
     def parse(cls, path: str) -> List[QuoteModel]:
-        """Parse DOCX file and create a list 
+        """Parse DOCX file and create a list
         of QuoteModel classes.
-        
+
         Returns:
             A list of QuoteModel objects.
         """

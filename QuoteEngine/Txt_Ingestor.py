@@ -8,23 +8,22 @@ from .QuoteModel import QuoteModel
 
 
 class Txt_Ingestor(IngestorInterface):
-    """Class to parse TEXT file and 
+    """Class to parse TEXT file and
     create a list of QuoteModel class.
     """
     allowed_extension = ['txt']
 
     @classmethod
     def parse(cls, path: str) -> List[QuoteModel]:
-        """Parse TEXT file and create a list 
+        """Parse TEXT file and create a list
         of QuoteModel classes.
-        
+
         Returns:
             A list of QuoteModel objects.
         """
         if not cls.can_ingest(path):
             raise Exception('cannot ingest exception')
 
-        
         quotes_list = []
 
         try:

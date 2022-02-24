@@ -1,0 +1,7 @@
+docx==0.2.4
+Flask==1.1.1
+pandas==0.23.3
+Pillow==9.0.1
+python_docx==0.8.11
+requests==2.18.4
+umbrella==0.1

@@ -10,14 +10,14 @@ from .Txt_Ingestor import Txt_Ingestor
 
 
 class Ingestor(IngestorInterface):
-    """Class to encapsulate all the ingestors to 
+    """Class to encapsulate all the ingestors to
     provide one interface to load all the file type
     """
     ingestors = [Doc_Ingestor, Csv_Ingestor, Pdf_Ingestor, Txt_Ingestor]
 
     @classmethod
     def parse(cls, path: str) -> List[QuoteModel]:
-        """Parse to match select an appropriate 
+        """Parse to match select an appropriate
         ingestor to a given file type
         """
         for ingestor in cls.ingestors:

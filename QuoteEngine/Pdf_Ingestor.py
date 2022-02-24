@@ -6,24 +6,25 @@ import random
 from .IngestorInterface import IngestorInterface
 from .QuoteModel import QuoteModel
 
+
 class Pdf_Ingestor(IngestorInterface):
-    """Class to pass PDF file and 
+    """Class to parse PDF file and
     create a list of QuoteModel class.
     """
     allowed_extension = ['pdf']
 
     @classmethod
     def parse(cls, path: str) -> List[QuoteModel]:
-        """Subprocess PDF to .txt, 
-        Parse .PDF file and create a list 
+        """Subprocess PDF to .txt,
+        Parse .PDF file and create a list
         of QuoteModel classes.
-        
+
         Returns:
             A list of QuoteModel objects.
         """
         if not cls.can_ingest(path):
             raise Exception('Cannot Ingest Exception')
-            
+
         quotes = []
         try:
             tmp = f'./_data/DogQuotes/{random.randint(0, 1000)}.txt'
