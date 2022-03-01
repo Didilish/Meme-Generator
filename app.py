@@ -22,11 +22,7 @@ def setup():
     quotes = []
     for f in quote_files:
         quotes.extend(Ingestor.parse(f))
-        try:
-            quotes.extend(Ingestor.parse(f))
-        except ValueError as error:
-            print(f'value error: {error}')
-
+        
     images_path = "./_data/photos/dog/"
         
     imgs = [
@@ -59,22 +55,24 @@ def meme_form():
 @app.route('/create', methods=['POST'])
 def meme_post():
     """ Create a user defined meme """
+    
+    try:
+        img = './temp_imag.jpg'
+        img_url = request.form.get('image_url')
+        response = requests.get(img_url, stream=True).content
 
-    img = './temp_imag.jpg'
-    img_url = request.form.get('image_url')
-    response = requests.get(img_url, stream=True).content
-
-    with open(img, 'wb') as f:
+        with open(img, 'wb') as f:
         f.write(response)
 
-    body = request.form.get('body', '')
-    author = request.form.get('author', '')
-    path = meme.make_meme(img, body, author)
-
-    os.remove(img)
-
-    return render_template('meme.html', path=path)
-
+        body = request.form.get('body', '')
+        author = request.form.get('author', '')
+        path = meme.make_meme(img, body, author)
+        os.remove(img)
+    
+        return render_template('meme.html', path=path)
+    except:
+        print("Invalid URL")
+        return render_template('meme_error.html') 
 
 if __name__ == "__main__":
     app.run()
