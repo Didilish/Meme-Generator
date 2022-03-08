@@ -42,8 +42,10 @@ class MemeEngine():
         
         if message is not None:
             draw = ImageDraw.Draw(img)
-            font = ImageFont.truetype("Roboto-Regular.ttf", 20)
-            
+            font = ImageFont.truetype(
+                            './font/LilitaOne-Regular.ttf',
+                            size=20)
+                        
             draw.text((2, 2), text, font=font)
             draw.text((30, 30), author, font=font)
 
