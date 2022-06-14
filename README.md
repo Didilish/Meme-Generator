@@ -12,6 +12,12 @@ This project will have the the following attributes:
 Packages used:
 Project uses `python 3`, `random`, `PIL`, `abc`, `argparse`, `typing`, `pandas`, `docx`, `os`, `subprocess`, `requests`, `flask`.
 
+This project will give you a hands-on opportunity to practice what you've learned in this course, such as:
+
+Object-oriented thinking in Python, including abstract classes, class methods, and static methods.
+DRY (don’t repeat yourself) principles of class and method design.
+Working with modules and packages in Python.
+
 # Instructions
 
 Starter Code
