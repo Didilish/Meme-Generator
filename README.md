@@ -18,6 +18,17 @@ Object-oriented thinking in Python, including abstract classes, class methods, a
 DRY (don’t repeat yourself) principles of class and method design.
 Working with modules and packages in Python.
 
+This project is designed to cover many areas of Python development. 
+
+Data Engineering Roles:
+To ingest data from a variety of data sources (TXT, DOCX, PDF) which is similar to the types of problems you'll experience when building machine learning pipelines.
+The application will be packaged into an advanced command-line tool in the same way you might package data science models.
+
+Full Stack Web Developers:
+The application built will be packaged into a Flask server for anyone to easily use!
+The application will accept HTTP requests, which is the backbone of the internet.
+A submodule that generates images will be implemented, which is similar to creating things like profile pictures or cropping images for a gallery.
+
 # Instructions
 
 Starter Code
